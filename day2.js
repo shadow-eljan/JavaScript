@@ -43,12 +43,29 @@
 // let newNumbers =[...number, 6,7,8];                    //SPREAD OPERATOR
 // console.log(newNumbers);
 
-let colors = [12, 15, 20]
+// let colors = [12, 15, 20]
 // let red = colors[0]
 // let blue = colors[1]
 // let green = colors[2]
 
-let [red, blue, green] = colors;
-console.log(red)
-console.log(blue)
-console.log(green)
+// let [red, blue, green] = colors;
+// console.log(red)
+// console.log(blue)
+// console.log(green)
+
+//OBJECT 
+let user ={
+    username: "John doe",
+    email: "doe@gmail.com",
+    password: "12345",
+};
+// console.log(user.username);
+// console.log(user);
+
+// let key = "email";
+// console.log(user[key]);
+// let newUser = {...user, age: 12, isVerified: true}
+// console.log(newUser);
+
+// let {email, password} = user;
+// console.log(email, password);
