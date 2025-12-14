@@ -38,6 +38,44 @@ const server = http.createServer((req,res) => {
                 res.end(JSON.stringify({message: "Node Created."}));
             });
         }
+    }else if(method == "PUT") {
+        const patharr = urlobj.pathname.split("/");
+
+        if(patharr[1] == "api" && patharr[2] == "notes"){
+            const noteID = patharr[3];
+            const note = notes.find((n) => n.id == noteID);
+            if(note){
+                let body = "";
+                req.on("data", (chunk) => (body += chunk));
+                req.on("end", ()=>{
+                    const data = JSON.parse(body);
+                    const title = data.title;
+                    const content = data.content;
+                    note.title = title || note.title;
+                    note.content = content || note.content;
+                    res.end(JSON.stringify({message: "Note Updated."}))
+                });
+            }else{
+                res.statusCode = 404;
+                res.end(JSON.stringify({error: "Note not found."}))
+            }
+        }
+    }else{
+        const patharr = notes.pathname.split("/");
+        if(patharr[1]=="api" && patharr[2] == "notes"){
+            const deleteId = patharr[3];
+            const note = notes.find((n) => n.id == deleteId);
+            if(note){
+                notes.splice(note, 1, );
+                res.end(JSON.stringify({message: "Deleted Successfully."}))
+            
+            }else{
+                res.statusCode = 404;
+                res.end(JSON.stringify({error: "Note not found."}))
+            }
+        }
+        
+        
     }
 })
 
