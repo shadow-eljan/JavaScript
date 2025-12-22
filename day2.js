@@ -8,7 +8,7 @@
 
 
 // console.log(numbers.slice(1,4))              //SLICE DOESN'T MODIFY ORIGINAL ARRAY
-// numbers.splice(2, 1, 0)                      //SPLICE(INDEX TO EDIT, HOW MANY ELEMENT TO REMOVE, REPLACE WITH)
+// console.log(numbers.splice(2, 1, 0));                     //SPLICE(INDEX TO EDIT, HOW MANY ELEMENT TO REMOVE, REPLACE WITH)
 // console.log(numbers.indexOf(true))
 // console.log(numbers.lastIndexOf(true))
 // console.log(numbers)
@@ -70,15 +70,15 @@
 // let {email: useremail, password} = user;
 // console.log(useremail, password);
 
-let username = "Ram";
-let password= "ram123";
+// let username = "Ram";
+// let password= "ram123";
 
-let users = {
-    // username: username,
-    // password: password,
-    // we can do
-    username,
-    password,
-    // if same variable and key name
-};
-console.log(users)
+// let users = {
+//     // username: username,
+//     // password: password,
+//     // we can do
+//     username,
+//     password,
+//     // if same variable and key name
+// };
+// console.log(users)
