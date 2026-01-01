@@ -7,7 +7,7 @@ const blogLogger = (req, res, next) => {
         const end = Date.now();
         let responseTime = `${time} :: ${req.method}, ${req.originalUrl}, ${end - start}ms\n`;
         console.log(responseTime);
-        fs.appendFile("../Logging/StoreBlog.txt", responseTime, (err)=> {
+        fs.appendFile("D:/3RD SEMESTER/Non Credit 3rd sem/Node/ExpressClass/Logging/BlogStore.txt", responseTime, (err)=> {
             if(err) console.log("Error.")
             else console.log("Successfully stored logging details.");
         })
